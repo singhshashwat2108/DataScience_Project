@@ -1,0 +1,39 @@
+{
+  "n_values_compared": 1200,
+  "n_nan_both": 120,
+  "n_nan_mismatch": 0,
+  "max_abs_diff": 0.00023969895747200098,
+  "max_rel_diff": 1.4266940805850276e-06,
+  "worst_row": {
+    "method": "Control: random Gaussian embedding",
+    "seed": 3,
+    "space": "plain std",
+    "variant": "all",
+    "metric": "ch",
+    "reported": 1.2669436931610107,
+    "recomputed": 1.266941885622522
+  },
+  "max_rel_diff_by_metric": {
+    "ch": 1.4266940805850276e-06,
+    "dbi": 1.0673229761586277e-06,
+    "silhouette": 2.5680790006103475e-07
+  },
+  "max_abs_diff_by_metric": {
+    "ch": 0.00023969895747200098,
+    "dbi": 2.9363385252167973e-05,
+    "silhouette": 2.266299323205878e-08
+  },
+  "max_rel_diff_by_method": {
+    "B0 DBSCAN": NaN,
+    "B0 Hierarchical": 3.886771419449467e-07,
+    "B0 K-Means": 4.102846031739724e-07,
+    "B0 Spectral": 1.7664245126702732e-07,
+    "B1 K-Means": 5.447618028081803e-07,
+    "B2 GMM": 9.65729114045939e-07,
+    "B3 AE+K-Means": 4.33117752737853e-07,
+    "B4 A=I+K-Means": 6.828534382747193e-07,
+    "Control: random Gaussian embedding": 1.4266940805850276e-06,
+    "Control: shuffled-edge GNN": 6.968795437096167e-07,
+    "GNN VGAE+K-Means": 9.381017255792547e-07
+  }
+}

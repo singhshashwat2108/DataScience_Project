@@ -1,0 +1,3 @@
+12 threads sage bit_identical True maxdiff 0.0 labels_identical True
+12 threads gcn bit_identical True maxdiff 0.0 labels_identical True
+AE bit_identical True

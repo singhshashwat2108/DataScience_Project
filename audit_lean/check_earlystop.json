@@ -1,0 +1,74 @@
+[
+  {
+    "kind": "gcn",
+    "seed": 0,
+    "val_auc_legacy": 0.9915738315896181,
+    "val_auc_fixed": 0.9862836247733855,
+    "auc_inflation": 0.005290206816232601,
+    "epochs_legacy": 171,
+    "epochs_fixed": 171,
+    "emb_max_abs_diff": 0.0,
+    "emb_identical": true,
+    "ari_labels_legacy_vs_fixed": 1.0
+  },
+  {
+    "kind": "gcn",
+    "seed": 1,
+    "val_auc_legacy": 0.9950289991510228,
+    "val_auc_fixed": 0.990287921412123,
+    "auc_inflation": 0.004741077738899868,
+    "epochs_legacy": 156,
+    "epochs_fixed": 156,
+    "emb_max_abs_diff": 0.0,
+    "emb_identical": true,
+    "ari_labels_legacy_vs_fixed": 1.0
+  },
+  {
+    "kind": "gcn",
+    "seed": 2,
+    "val_auc_legacy": 0.9945762639548908,
+    "val_auc_fixed": 0.9900149371010172,
+    "auc_inflation": 0.004561326853873671,
+    "epochs_legacy": 186,
+    "epochs_fixed": 186,
+    "emb_max_abs_diff": 0.0,
+    "emb_identical": true,
+    "ari_labels_legacy_vs_fixed": 1.0
+  },
+  {
+    "kind": "sage",
+    "seed": 0,
+    "val_auc_legacy": 0.9913490442191129,
+    "val_auc_fixed": 0.9890936644331466,
+    "auc_inflation": 0.0022553797859662383,
+    "epochs_legacy": 181,
+    "epochs_fixed": 181,
+    "emb_max_abs_diff": 0.0,
+    "emb_identical": true,
+    "ari_labels_legacy_vs_fixed": 1.0
+  },
+  {
+    "kind": "sage",
+    "seed": 1,
+    "val_auc_legacy": 0.9930369247823534,
+    "val_auc_fixed": 0.9909528021582749,
+    "auc_inflation": 0.0020841226240785327,
+    "epochs_legacy": 200,
+    "epochs_fixed": 200,
+    "emb_max_abs_diff": 0.0,
+    "emb_identical": true,
+    "ari_labels_legacy_vs_fixed": 1.0
+  },
+  {
+    "kind": "sage",
+    "seed": 2,
+    "val_auc_legacy": 0.9932757366724595,
+    "val_auc_fixed": 0.9909563576702862,
+    "auc_inflation": 0.002319379002173272,
+    "epochs_legacy": 200,
+    "epochs_fixed": 200,
+    "emb_max_abs_diff": 0.0,
+    "emb_identical": true,
+    "ari_labels_legacy_vs_fixed": 1.0
+  }
+]

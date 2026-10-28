@@ -1,0 +1,338 @@
+table,method,variant,metric,mean,sd,n,source_file,note
+fix_earlystop,gcn,legacy-minus-fixed val AUC,auc_inflation,0.004864203803002047,0.00037971900219512227,3,check_earlystop.json,
+fix_earlystop,sage,legacy-minus-fixed val AUC,auc_inflation,0.002219627137406014,0.0001216350268954913,3,check_earlystop.json,
+main,B0 K-Means,all,silhouette,0.12094244658946991,7.676738419286699e-05,10,results_by_seed.csv,
+main,B0 K-Means,all,dbi,1.8717879297468418,0.00020376627875521162,10,results_by_seed.csv,
+main,B0 K-Means,all,ch,252.33414764404296,0.08507966161625008,10,results_by_seed.csv,
+main,B0 K-Means,all,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,B0 K-Means,all,noise_share,0.0,0.0,10,results_by_seed.csv,
+main,B0 DBSCAN,all,silhouette,,,10,results_by_seed.csv,
+main,B0 DBSCAN,all,dbi,,,10,results_by_seed.csv,
+main,B0 DBSCAN,all,ch,,,10,results_by_seed.csv,
+main,B0 DBSCAN,all,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,B0 DBSCAN,all,noise_share,0.0104244229337304,0.0,10,results_by_seed.csv,
+main,B0 Hierarchical,all,silhouette,0.0837215408682823,0.0,10,results_by_seed.csv,
+main,B0 Hierarchical,all,dbi,1.960549333562532,0.0,10,results_by_seed.csv,
+main,B0 Hierarchical,all,ch,188.0609893798828,0.0,10,results_by_seed.csv,
+main,B0 Hierarchical,all,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,B0 Hierarchical,all,noise_share,0.0,0.0,10,results_by_seed.csv,
+main,B0 Spectral,all,silhouette,0.11816724389791482,1.4628472785736255e-17,10,results_by_seed.csv,
+main,B0 Spectral,all,dbi,2.050530163617972,0.0,10,results_by_seed.csv,
+main,B0 Spectral,all,ch,247.4764404296875,0.0,10,results_by_seed.csv,
+main,B0 Spectral,all,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,B0 Spectral,all,noise_share,0.0,0.0,10,results_by_seed.csv,
+main,B1 K-Means,all,silhouette,0.22496645450592037,0.00023254922021596257,10,results_by_seed.csv,
+main,B1 K-Means,all,dbi,1.6772658706513912,0.0005428852849118279,10,results_by_seed.csv,
+main,B1 K-Means,all,ch,343.9567138671875,0.03731724925358437,10,results_by_seed.csv,
+main,B1 K-Means,all,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,B1 K-Means,all,noise_share,0.0,0.0,10,results_by_seed.csv,
+main,B2 GMM,all,silhouette,0.18370236158370967,0.0045247300810869655,10,results_by_seed.csv,
+main,B2 GMM,all,dbi,1.9658456804409519,0.27728738640884176,10,results_by_seed.csv,
+main,B2 GMM,all,ch,264.6256271362305,18.391413793139513,10,results_by_seed.csv,
+main,B2 GMM,all,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,B2 GMM,all,noise_share,0.0,0.0,10,results_by_seed.csv,
+main,B3 AE+K-Means,all,silhouette,0.22517156600952143,0.0006706257170595665,10,results_by_seed.csv,
+main,B3 AE+K-Means,all,dbi,1.6690967886100179,0.005512172150633167,10,results_by_seed.csv,
+main,B3 AE+K-Means,all,ch,332.9020080566406,1.1663335732850988,10,results_by_seed.csv,
+main,B3 AE+K-Means,all,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,B3 AE+K-Means,all,noise_share,0.0,0.0,10,results_by_seed.csv,
+main,B4 A=I+K-Means,all,silhouette,0.18615158349275587,0.022228027339250653,10,results_by_seed.csv,
+main,B4 A=I+K-Means,all,dbi,1.8623659133738417,0.12343897822133111,10,results_by_seed.csv,
+main,B4 A=I+K-Means,all,ch,282.6573654174805,27.59617008959548,10,results_by_seed.csv,
+main,B4 A=I+K-Means,all,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,B4 A=I+K-Means,all,noise_share,0.0,0.0,10,results_by_seed.csv,
+main,GNN VGAE+K-Means,all,silhouette,0.1552584901452064,0.011395956879287687,10,results_by_seed.csv,
+main,GNN VGAE+K-Means,all,dbi,1.9741080021520836,0.09975128032751111,10,results_by_seed.csv,
+main,GNN VGAE+K-Means,all,ch,239.48534088134767,17.122689910437522,10,results_by_seed.csv,
+main,GNN VGAE+K-Means,all,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,GNN VGAE+K-Means,all,noise_share,0.0,0.0,10,results_by_seed.csv,
+main,Control: shuffled-edge GNN,all,silhouette,0.15560769643634553,0.06514233237489321,10,results_by_seed.csv,
+main,Control: shuffled-edge GNN,all,dbi,2.8079582386341317,2.758259573812416,10,results_by_seed.csv,
+main,Control: shuffled-edge GNN,all,ch,239.71354746818542,84.10120350867349,10,results_by_seed.csv,
+main,Control: shuffled-edge GNN,all,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,Control: shuffled-edge GNN,all,noise_share,0.0,0.0,10,results_by_seed.csv,
+main,Control: random Gaussian embedding,all,silhouette,-0.012229113560169879,0.0014353783097469073,10,results_by_seed.csv,
+main,Control: random Gaussian embedding,all,dbi,37.35127883246433,5.361177543212198,10,results_by_seed.csv,
+main,Control: random Gaussian embedding,all,ch,0.9397006392478943,0.26471279009979076,10,results_by_seed.csv,
+main,Control: random Gaussian embedding,all,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,Control: random Gaussian embedding,all,noise_share,0.0,0.0,10,results_by_seed.csv,
+main,B0 K-Means,merged,silhouette,0.12094244658946991,7.676738419286699e-05,10,results_by_seed.csv,
+main,B0 K-Means,merged,dbi,1.8717879297468418,0.00020376627875521162,10,results_by_seed.csv,
+main,B0 K-Means,merged,ch,252.33414764404296,0.08507966161625008,10,results_by_seed.csv,
+main,B0 K-Means,merged,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,B0 K-Means,merged,noise_share,0.0,0.0,10,results_by_seed.csv,
+main,B0 DBSCAN,merged,silhouette,,,10,results_by_seed.csv,
+main,B0 DBSCAN,merged,dbi,,,10,results_by_seed.csv,
+main,B0 DBSCAN,merged,ch,,,10,results_by_seed.csv,
+main,B0 DBSCAN,merged,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,B0 DBSCAN,merged,noise_share,0.0104244229337304,0.0,10,results_by_seed.csv,
+main,B0 Hierarchical,merged,silhouette,0.0837215408682823,0.0,10,results_by_seed.csv,
+main,B0 Hierarchical,merged,dbi,1.960549333562532,0.0,10,results_by_seed.csv,
+main,B0 Hierarchical,merged,ch,188.0609893798828,0.0,10,results_by_seed.csv,
+main,B0 Hierarchical,merged,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,B0 Hierarchical,merged,noise_share,0.0,0.0,10,results_by_seed.csv,
+main,B0 Spectral,merged,silhouette,0.11816724389791482,1.4628472785736255e-17,10,results_by_seed.csv,
+main,B0 Spectral,merged,dbi,2.050530163617972,0.0,10,results_by_seed.csv,
+main,B0 Spectral,merged,ch,247.4764404296875,0.0,10,results_by_seed.csv,
+main,B0 Spectral,merged,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,B0 Spectral,merged,noise_share,0.0,0.0,10,results_by_seed.csv,
+main,B1 K-Means,merged,silhouette,0.22496645450592037,0.00023254922021596257,10,results_by_seed.csv,
+main,B1 K-Means,merged,dbi,1.6772658706513912,0.0005428852849118279,10,results_by_seed.csv,
+main,B1 K-Means,merged,ch,343.9567138671875,0.03731724925358437,10,results_by_seed.csv,
+main,B1 K-Means,merged,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,B1 K-Means,merged,noise_share,0.0,0.0,10,results_by_seed.csv,
+main,B2 GMM,merged,silhouette,0.18370236158370967,0.0045247300810869655,10,results_by_seed.csv,
+main,B2 GMM,merged,dbi,1.9658456804409519,0.27728738640884176,10,results_by_seed.csv,
+main,B2 GMM,merged,ch,264.6256271362305,18.391413793139513,10,results_by_seed.csv,
+main,B2 GMM,merged,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,B2 GMM,merged,noise_share,0.0,0.0,10,results_by_seed.csv,
+main,B3 AE+K-Means,merged,silhouette,0.22517156600952143,0.0006706257170595665,10,results_by_seed.csv,
+main,B3 AE+K-Means,merged,dbi,1.6690967886100179,0.005512172150633167,10,results_by_seed.csv,
+main,B3 AE+K-Means,merged,ch,332.9020080566406,1.1663335732850988,10,results_by_seed.csv,
+main,B3 AE+K-Means,merged,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,B3 AE+K-Means,merged,noise_share,0.0,0.0,10,results_by_seed.csv,
+main,B4 A=I+K-Means,merged,silhouette,0.18615158349275587,0.022228027339250653,10,results_by_seed.csv,
+main,B4 A=I+K-Means,merged,dbi,1.8623659133738417,0.12343897822133111,10,results_by_seed.csv,
+main,B4 A=I+K-Means,merged,ch,282.6573654174805,27.59617008959548,10,results_by_seed.csv,
+main,B4 A=I+K-Means,merged,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,B4 A=I+K-Means,merged,noise_share,0.0,0.0,10,results_by_seed.csv,
+main,GNN VGAE+K-Means,merged,silhouette,0.1552584901452064,0.011395956879287687,10,results_by_seed.csv,
+main,GNN VGAE+K-Means,merged,dbi,1.9741080021520836,0.09975128032751111,10,results_by_seed.csv,
+main,GNN VGAE+K-Means,merged,ch,239.48534088134767,17.122689910437522,10,results_by_seed.csv,
+main,GNN VGAE+K-Means,merged,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,GNN VGAE+K-Means,merged,noise_share,0.0,0.0,10,results_by_seed.csv,
+main,Control: shuffled-edge GNN,merged,silhouette,0.15560769643634553,0.06514233237489321,10,results_by_seed.csv,
+main,Control: shuffled-edge GNN,merged,dbi,2.8079582386341317,2.758259573812416,10,results_by_seed.csv,
+main,Control: shuffled-edge GNN,merged,ch,239.71354746818542,84.10120350867349,10,results_by_seed.csv,
+main,Control: shuffled-edge GNN,merged,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,Control: shuffled-edge GNN,merged,noise_share,0.0,0.0,10,results_by_seed.csv,
+main,Control: random Gaussian embedding,merged,silhouette,-0.012229113560169879,0.0014353783097469073,10,results_by_seed.csv,
+main,Control: random Gaussian embedding,merged,dbi,37.35127883246433,5.361177543212198,10,results_by_seed.csv,
+main,Control: random Gaussian embedding,merged,ch,0.9397006392478943,0.26471279009979076,10,results_by_seed.csv,
+main,Control: random Gaussian embedding,merged,n_seeds_with_tiny_cluster,0.0,,10,results_by_seed.csv,
+main,Control: random Gaussian embedding,merged,noise_share,0.0,0.0,10,results_by_seed.csv,
+graph_effect,GNN - B3 AE+K-Means,common/all,silhouette,-0.06991307586431503,0.01116366091454247,10,results_by_seed.csv,p_ttest=9.904e-09; p_wilcoxon=0.001953; gnn_better_mean=False; sig=False
+graph_effect,GNN - B3 AE+K-Means,common/all,dbi,0.30501121354206556,0.1012828210634184,10,results_by_seed.csv,p_ttest=5.366e-06; p_wilcoxon=0.001953; gnn_better_mean=False; sig=False
+graph_effect,GNN - B3 AE+K-Means,common/all,ch,-93.41666717529297,16.88324330416995,10,results_by_seed.csv,p_ttest=2.942e-08; p_wilcoxon=0.001953; gnn_better_mean=False; sig=False
+graph_effect,GNN - B4 A=I+K-Means,common/all,silhouette,-0.03089309334754945,0.023828427654190215,10,results_by_seed.csv,p_ttest=0.002677; p_wilcoxon=0.005859; gnn_better_mean=False; sig=False
+graph_effect,GNN - B4 A=I+K-Means,common/all,dbi,0.11174208877824152,0.19038147424455729,10,results_by_seed.csv,p_ttest=0.09642; p_wilcoxon=0.08398; gnn_better_mean=False; sig=False
+graph_effect,GNN - B4 A=I+K-Means,common/all,ch,-43.172024536132824,30.847923975452797,10,results_by_seed.csv,p_ttest=0.001658; p_wilcoxon=0.005859; gnn_better_mean=False; sig=False
+graph_effect,GNN - B3 AE+K-Means,common/merged,silhouette,-0.06991307586431503,0.01116366091454247,10,results_by_seed.csv,p_ttest=9.904e-09; p_wilcoxon=0.001953; gnn_better_mean=False; sig=False
+graph_effect,GNN - B3 AE+K-Means,common/merged,dbi,0.30501121354206556,0.1012828210634184,10,results_by_seed.csv,p_ttest=5.366e-06; p_wilcoxon=0.001953; gnn_better_mean=False; sig=False
+graph_effect,GNN - B3 AE+K-Means,common/merged,ch,-93.41666717529297,16.88324330416995,10,results_by_seed.csv,p_ttest=2.942e-08; p_wilcoxon=0.001953; gnn_better_mean=False; sig=False
+graph_effect,GNN - B4 A=I+K-Means,common/merged,silhouette,-0.03089309334754945,0.023828427654190215,10,results_by_seed.csv,p_ttest=0.002677; p_wilcoxon=0.005859; gnn_better_mean=False; sig=False
+graph_effect,GNN - B4 A=I+K-Means,common/merged,dbi,0.11174208877824152,0.19038147424455729,10,results_by_seed.csv,p_ttest=0.09642; p_wilcoxon=0.08398; gnn_better_mean=False; sig=False
+graph_effect,GNN - B4 A=I+K-Means,common/merged,ch,-43.172024536132824,30.847923975452797,10,results_by_seed.csv,p_ttest=0.001658; p_wilcoxon=0.005859; gnn_better_mean=False; sig=False
+graph_effect,GNN - B3 AE+K-Means,plain-std/all,silhouette,-0.09551391415297987,0.015457008771405652,10,results_by_seed.csv,p_ttest=1.114e-08; p_wilcoxon=0.001953; gnn_better_mean=False; sig=False
+graph_effect,GNN - B3 AE+K-Means,plain-std/all,dbi,0.6940079319984546,0.10260305115926899,10,results_by_seed.csv,p_ttest=5.017e-09; p_wilcoxon=0.001953; gnn_better_mean=False; sig=False
+graph_effect,GNN - B3 AE+K-Means,plain-std/all,ch,-73.69526596069336,9.424544446713165,10,results_by_seed.csv,p_ttest=1.388e-09; p_wilcoxon=0.001953; gnn_better_mean=False; sig=False
+graph_effect,GNN - B4 A=I+K-Means,plain-std/all,silhouette,-0.041402020677924166,0.02336470539684556,10,results_by_seed.csv,p_ttest=0.0003328; p_wilcoxon=0.001953; gnn_better_mean=False; sig=False
+graph_effect,GNN - B4 A=I+K-Means,plain-std/all,dbi,0.30335686083222596,0.2870434163659588,10,results_by_seed.csv,p_ttest=0.008633; p_wilcoxon=0.02734; gnn_better_mean=False; sig=False
+graph_effect,GNN - B4 A=I+K-Means,plain-std/all,ch,-45.7095947265625,19.36526281512146,10,results_by_seed.csv,p_ttest=3.834e-05; p_wilcoxon=0.001953; gnn_better_mean=False; sig=False
+graph_effect,GNN - B3 AE+K-Means,plain-std/merged,silhouette,-0.09551391415297987,0.015457008771405652,10,results_by_seed.csv,p_ttest=1.114e-08; p_wilcoxon=0.001953; gnn_better_mean=False; sig=False
+graph_effect,GNN - B3 AE+K-Means,plain-std/merged,dbi,0.6940079319984546,0.10260305115926899,10,results_by_seed.csv,p_ttest=5.017e-09; p_wilcoxon=0.001953; gnn_better_mean=False; sig=False
+graph_effect,GNN - B3 AE+K-Means,plain-std/merged,ch,-73.69526596069336,9.424544446713165,10,results_by_seed.csv,p_ttest=1.388e-09; p_wilcoxon=0.001953; gnn_better_mean=False; sig=False
+graph_effect,GNN - B4 A=I+K-Means,plain-std/merged,silhouette,-0.041402020677924166,0.02336470539684556,10,results_by_seed.csv,p_ttest=0.0003328; p_wilcoxon=0.001953; gnn_better_mean=False; sig=False
+graph_effect,GNN - B4 A=I+K-Means,plain-std/merged,dbi,0.30335686083222596,0.2870434163659588,10,results_by_seed.csv,p_ttest=0.008633; p_wilcoxon=0.02734; gnn_better_mean=False; sig=False
+graph_effect,GNN - B4 A=I+K-Means,plain-std/merged,ch,-45.7095947265625,19.36526281512146,10,results_by_seed.csv,p_ttest=3.834e-05; p_wilcoxon=0.001953; gnn_better_mean=False; sig=False
+config_grid,k=5 gcn,validation,silhouette,0.1463826894760131,0.0043905004296525,2,config_grid_validation.csv,
+config_grid,k=5 gcn,validation,dbi,1.894126054728665,,2,config_grid_validation.csv,
+config_grid,k=5 gcn,validation,ch,244.0522994995117,,2,config_grid_validation.csv,
+config_grid,k=5 gcn,validation,link_auc,0.9883019704252513,,2,config_grid_validation.csv,
+config_grid,k=5 sage,validation,silhouette,0.1745631769299507,0.0315886309537178,2,config_grid_validation.csv,
+config_grid,k=5 sage,validation,dbi,1.9238560378121945,,2,config_grid_validation.csv,
+config_grid,k=5 sage,validation,ch,278.16180419921875,,2,config_grid_validation.csv,
+config_grid,k=5 sage,validation,link_auc,0.9209732147477898,,2,config_grid_validation.csv,
+config_grid,k=10 gcn,validation,silhouette,0.1737858280539512,0.0029549050123866,2,config_grid_validation.csv,
+config_grid,k=10 gcn,validation,dbi,1.9322637391583788,,2,config_grid_validation.csv,
+config_grid,k=10 gcn,validation,ch,261.80230712890625,,2,config_grid_validation.csv,
+config_grid,k=10 gcn,validation,link_auc,0.9877350252721075,,2,config_grid_validation.csv,
+config_grid,k=10 sage,validation,silhouette,0.1765044629573822,0.0300112535380612,2,config_grid_validation.csv,
+config_grid,k=10 sage,validation,dbi,1.908145151987839,,2,config_grid_validation.csv,
+config_grid,k=10 sage,validation,ch,280.03929138183594,,2,config_grid_validation.csv,
+config_grid,k=10 sage,validation,link_auc,0.9127241331822852,,2,config_grid_validation.csv,
+config_grid,k=20 gcn,validation,silhouette,0.1676353588700294,0.03437207204965,2,config_grid_validation.csv,
+config_grid,k=20 gcn,validation,dbi,1.9119507391795945,,2,config_grid_validation.csv,
+config_grid,k=20 gcn,validation,ch,263.03430938720703,,2,config_grid_validation.csv,
+config_grid,k=20 gcn,validation,link_auc,0.9887895737971488,,2,config_grid_validation.csv,
+config_grid,k=20 sage,validation,silhouette,0.176807515323162,0.029953080350404,2,config_grid_validation.csv,chosen
+config_grid,k=20 sage,validation,dbi,1.9124892477415387,,2,config_grid_validation.csv,
+config_grid,k=20 sage,validation,ch,280.2705078125,,2,config_grid_validation.csv,
+config_grid,k=20 sage,validation,link_auc,0.9107537573585068,,2,config_grid_validation.csv,
+controls,GNN - Control: shuffled-edge GNN,all,silhouette,-0.0003492062911391314,0.06374015472212138,10,results_by_seed.csv,p_ttest=0.9866; seeds_gnn_better=3
+controls,GNN - Control: shuffled-edge GNN,all,dbi,-0.8338502364820487,2.7022509515311044,10,results_by_seed.csv,p_ttest=0.3547; seeds_gnn_better=4
+controls,GNN - Control: shuffled-edge GNN,all,ch,-0.22820658683776857,77.80783643274673,10,results_by_seed.csv,p_ttest=0.9928; seeds_gnn_better=3
+controls,GNN - Control: random Gaussian embedding,all,silhouette,0.1674876037053763,0.01106165475459127,10,results_by_seed.csv,p_ttest=3.788e-12; seeds_gnn_better=10
+controls,GNN - Control: random Gaussian embedding,all,dbi,-35.37717083031225,5.345886980837713,10,results_by_seed.csv,p_ttest=6.087e-09; seeds_gnn_better=10
+controls,GNN - Control: random Gaussian embedding,all,ch,238.54564024209975,17.17376030596528,10,results_by_seed.csv,p_ttest=8.208e-12; seeds_gnn_better=10
+controls,GNN - B4 A=I+K-Means,all,silhouette,-0.03089309334754945,0.023828427654190215,10,results_by_seed.csv,p_ttest=0.002677; seeds_gnn_better=1
+controls,GNN - B4 A=I+K-Means,all,dbi,0.11174208877824152,0.19038147424455729,10,results_by_seed.csv,p_ttest=0.09642; seeds_gnn_better=2
+controls,GNN - B4 A=I+K-Means,all,ch,-43.172024536132824,30.847923975452797,10,results_by_seed.csv,p_ttest=0.001658; seeds_gnn_better=1
+controls,GNN - Control: shuffled-edge GNN,merged,silhouette,-0.0003492062911391314,0.06374015472212138,10,results_by_seed.csv,p_ttest=0.9866; seeds_gnn_better=3
+controls,GNN - Control: shuffled-edge GNN,merged,dbi,-0.8338502364820487,2.7022509515311044,10,results_by_seed.csv,p_ttest=0.3547; seeds_gnn_better=4
+controls,GNN - Control: shuffled-edge GNN,merged,ch,-0.22820658683776857,77.80783643274673,10,results_by_seed.csv,p_ttest=0.9928; seeds_gnn_better=3
+controls,GNN - Control: random Gaussian embedding,merged,silhouette,0.1674876037053763,0.01106165475459127,10,results_by_seed.csv,p_ttest=3.788e-12; seeds_gnn_better=10
+controls,GNN - Control: random Gaussian embedding,merged,dbi,-35.37717083031225,5.345886980837713,10,results_by_seed.csv,p_ttest=6.087e-09; seeds_gnn_better=10
+controls,GNN - Control: random Gaussian embedding,merged,ch,238.54564024209975,17.17376030596528,10,results_by_seed.csv,p_ttest=8.208e-12; seeds_gnn_better=10
+controls,GNN - B4 A=I+K-Means,merged,silhouette,-0.03089309334754945,0.023828427654190215,10,results_by_seed.csv,p_ttest=0.002677; seeds_gnn_better=1
+controls,GNN - B4 A=I+K-Means,merged,dbi,0.11174208877824152,0.19038147424455729,10,results_by_seed.csv,p_ttest=0.09642; seeds_gnn_better=2
+controls,GNN - B4 A=I+K-Means,merged,ch,-43.172024536132824,30.847923975452797,10,results_by_seed.csv,p_ttest=0.001658; seeds_gnn_better=1
+controls,GNN VGAE+K-Means,all,silhouette,0.1552584901452064,0.011395956879287687,10,results_by_seed.csv,
+controls,GNN VGAE+K-Means,all,dbi,1.9741080021520836,0.09975128032751111,10,results_by_seed.csv,
+controls,GNN VGAE+K-Means,all,ch,239.48534088134767,17.122689910437522,10,results_by_seed.csv,
+controls,GNN VGAE+K-Means,merged,silhouette,0.1552584901452064,0.011395956879287687,10,results_by_seed.csv,
+controls,GNN VGAE+K-Means,merged,dbi,1.9741080021520836,0.09975128032751111,10,results_by_seed.csv,
+controls,GNN VGAE+K-Means,merged,ch,239.48534088134767,17.122689910437522,10,results_by_seed.csv,
+controls,B4 A=I+K-Means,all,silhouette,0.18615158349275587,0.022228027339250653,10,results_by_seed.csv,
+controls,B4 A=I+K-Means,all,dbi,1.8623659133738417,0.12343897822133111,10,results_by_seed.csv,
+controls,B4 A=I+K-Means,all,ch,282.6573654174805,27.59617008959548,10,results_by_seed.csv,
+controls,B4 A=I+K-Means,merged,silhouette,0.18615158349275587,0.022228027339250653,10,results_by_seed.csv,
+controls,B4 A=I+K-Means,merged,dbi,1.8623659133738417,0.12343897822133111,10,results_by_seed.csv,
+controls,B4 A=I+K-Means,merged,ch,282.6573654174805,27.59617008959548,10,results_by_seed.csv,
+controls,Control: shuffled-edge GNN,all,silhouette,0.15560769643634553,0.06514233237489321,10,results_by_seed.csv,
+controls,Control: shuffled-edge GNN,all,dbi,2.8079582386341317,2.758259573812416,10,results_by_seed.csv,
+controls,Control: shuffled-edge GNN,all,ch,239.71354746818542,84.10120350867349,10,results_by_seed.csv,
+controls,Control: shuffled-edge GNN,merged,silhouette,0.15560769643634553,0.06514233237489321,10,results_by_seed.csv,
+controls,Control: shuffled-edge GNN,merged,dbi,2.8079582386341317,2.758259573812416,10,results_by_seed.csv,
+controls,Control: shuffled-edge GNN,merged,ch,239.71354746818542,84.10120350867349,10,results_by_seed.csv,
+controls,Control: random Gaussian embedding,all,silhouette,-0.012229113560169879,0.0014353783097469073,10,results_by_seed.csv,
+controls,Control: random Gaussian embedding,all,dbi,37.35127883246433,5.361177543212198,10,results_by_seed.csv,
+controls,Control: random Gaussian embedding,all,ch,0.9397006392478943,0.26471279009979076,10,results_by_seed.csv,
+controls,Control: random Gaussian embedding,merged,silhouette,-0.012229113560169879,0.0014353783097469073,10,results_by_seed.csv,
+controls,Control: random Gaussian embedding,merged,dbi,37.35127883246433,5.361177543212198,10,results_by_seed.csv,
+controls,Control: random Gaussian embedding,merged,ch,0.9397006392478943,0.26471279009979076,10,results_by_seed.csv,
+replication,K-Means,PCA 95% space,dbi,1.5630241613560385,,1,replication_b0.csv,published=0.8
+replication,K-Means,PCA 95% space,silhouette,0.2051772503348097,,1,replication_b0.csv,published=0.408
+replication,K-Means,PCA 95% space,ch,2416.5141821204857,,1,replication_b0.csv,published=5823.343
+replication,K-Means,capped+standardized 17-var space,dbi,1.6165218863431468,,1,replication_b0.csv,published=0.8
+replication,K-Means,capped+standardized 17-var space,silhouette,0.194264238217908,,1,replication_b0.csv,published=0.408
+replication,K-Means,capped+standardized 17-var space,ch,2253.966355189854,,1,replication_b0.csv,published=5823.343
+replication,DBSCAN,PCA 95% space,dbi,0.6891542819783018,,1,replication_b0.csv,published=1.287
+replication,DBSCAN,PCA 95% space,silhouette,0.4085499901575139,,1,replication_b0.csv,published=0.803
+replication,DBSCAN,PCA 95% space,ch,83.30072711962426,,1,replication_b0.csv,published=685.302
+replication,DBSCAN,capped+standardized 17-var space,dbi,0.7369915388964468,,1,replication_b0.csv,published=1.287
+replication,DBSCAN,capped+standardized 17-var space,silhouette,0.4042006454763285,,1,replication_b0.csv,published=0.803
+replication,DBSCAN,capped+standardized 17-var space,ch,80.13587766626347,,1,replication_b0.csv,published=685.302
+replication,Hierarchical,PCA 95% space,dbi,1.6324867783713417,,1,replication_b0.csv,published=0.855
+replication,Hierarchical,PCA 95% space,silhouette,0.1656895721644057,,1,replication_b0.csv,published=0.388
+replication,Hierarchical,PCA 95% space,ch,1870.052742471026,,1,replication_b0.csv,published=4936.96
+replication,Hierarchical,capped+standardized 17-var space,dbi,1.692779995323506,,1,replication_b0.csv,published=0.855
+replication,Hierarchical,capped+standardized 17-var space,silhouette,0.1588875737516186,,1,replication_b0.csv,published=0.388
+replication,Hierarchical,capped+standardized 17-var space,ch,1754.7066153885742,,1,replication_b0.csv,published=4936.96
+replication,Spectral,PCA 95% space,dbi,1.59646995265249,,1,replication_b0.csv,published=11.334
+replication,Spectral,PCA 95% space,silhouette,0.096426642362929,,1,replication_b0.csv,published=0.004
+replication,Spectral,PCA 95% space,ch,1744.8858009058872,,1,replication_b0.csv,published=190.856
+replication,Spectral,capped+standardized 17-var space,dbi,1.6418899691175333,,1,replication_b0.csv,published=11.334
+replication,Spectral,capped+standardized 17-var space,silhouette,0.0862187560366775,,1,replication_b0.csv,published=0.004
+replication,Spectral,capped+standardized 17-var space,ch,1640.5824786214932,,1,replication_b0.csv,published=190.856
+stability,B0 K-Means,test,mean_pairwise_ari,0.9991283029713234,0.0011735580403282,45,stability.csv,
+agreement_with_GNN,B0 K-Means,test,ari,0.14289997227371662,0.026813192391603086,10,cross_method_agreement.csv,
+agreement_with_GNN,B0 K-Means,test,nmi,0.21469090411215888,0.02120873896878758,10,cross_method_agreement.csv,
+stability,B0 DBSCAN,test,mean_pairwise_ari,1.0,0.0,45,stability.csv,
+agreement_with_GNN,B0 DBSCAN,test,ari,0.0011617441339927498,0.0020631281141318325,10,cross_method_agreement.csv,
+agreement_with_GNN,B0 DBSCAN,test,nmi,0.01165537696874327,0.0039490988046382075,10,cross_method_agreement.csv,
+stability,B0 Hierarchical,test,mean_pairwise_ari,1.0,0.0,45,stability.csv,
+agreement_with_GNN,B0 Hierarchical,test,ari,0.1512647994387999,0.029999341032384046,10,cross_method_agreement.csv,
+agreement_with_GNN,B0 Hierarchical,test,nmi,0.2218685133114652,0.02251023238373689,10,cross_method_agreement.csv,
+stability,B0 Spectral,test,mean_pairwise_ari,1.0,0.0,45,stability.csv,
+agreement_with_GNN,B0 Spectral,test,ari,0.18676528305722648,0.04806130198000954,10,cross_method_agreement.csv,
+agreement_with_GNN,B0 Spectral,test,nmi,0.24552123438911408,0.04240509270271839,10,cross_method_agreement.csv,
+stability,B1 K-Means,test,mean_pairwise_ari,0.995979000677483,0.0030159140260365,45,stability.csv,
+agreement_with_GNN,B1 K-Means,test,ari,0.2814211894452287,0.07126327754095406,10,cross_method_agreement.csv,
+agreement_with_GNN,B1 K-Means,test,nmi,0.35607862934163304,0.0550878825806913,10,cross_method_agreement.csv,
+stability,B2 GMM,test,mean_pairwise_ari,0.7164183756057463,0.2041884442221455,45,stability.csv,
+agreement_with_GNN,B2 GMM,test,ari,0.28432045831241853,0.059258964859239524,10,cross_method_agreement.csv,
+agreement_with_GNN,B2 GMM,test,nmi,0.387916383417038,0.05582566112325006,10,cross_method_agreement.csv,
+stability,B3 AE+K-Means,test,mean_pairwise_ari,0.9337793651547818,0.0290476535873791,45,stability.csv,
+agreement_with_GNN,B3 AE+K-Means,test,ari,0.23726272852564662,0.06882811885611724,10,cross_method_agreement.csv,
+agreement_with_GNN,B3 AE+K-Means,test,nmi,0.3237941569777385,0.06409815370708177,10,cross_method_agreement.csv,
+stability,B4 A=I+K-Means,test,mean_pairwise_ari,0.4011696489061969,0.0984568426995022,45,stability.csv,
+agreement_with_GNN,B4 A=I+K-Means,test,ari,0.3053138464561823,0.10929943005274334,10,cross_method_agreement.csv,
+agreement_with_GNN,B4 A=I+K-Means,test,nmi,0.3758503171769682,0.09611042514356789,10,cross_method_agreement.csv,
+stability,GNN VGAE+K-Means,test,mean_pairwise_ari,0.4854059863501236,0.2386684604242873,45,stability.csv,
+stability,Control: shuffled-edge GNN,test,mean_pairwise_ari,0.2857094134680664,0.1508474766411711,45,stability.csv,
+agreement_with_GNN,Control: shuffled-edge GNN,test,ari,0.2368022176077636,0.09789952296445717,10,cross_method_agreement.csv,
+agreement_with_GNN,Control: shuffled-edge GNN,test,nmi,0.2963417837805008,0.11138297031799488,10,cross_method_agreement.csv,
+stability,Control: random Gaussian embedding,test,mean_pairwise_ari,0.0001874665313909,0.0011230003625428,45,stability.csv,
+agreement_with_GNN,Control: random Gaussian embedding,test,ari,-0.0004970828222954377,0.0006007228886936934,10,cross_method_agreement.csv,
+agreement_with_GNN,Control: random Gaussian embedding,test,nmi,0.0020704151188865403,0.0007823817053873464,10,cross_method_agreement.csv,
+surrogate,HGB surrogate,test,macro_f1,0.9860434520146151,,1343,surrogate_fidelity.json,
+surrogate,HGB surrogate,test,accuracy,0.9858525688756515,,1343,surrogate_fidelity.json,
+shap_top5,segment 0,cc_installments_purchases,rank1_mean_abs_shap,0.3792361146921418,,100,shap_per_segment.csv,
+shap_top5,segment 0,cc_tenure,rank2_mean_abs_shap,0.2107467597636873,,100,shap_per_segment.csv,
+shap_top5,segment 0,cc_oneoff_purchases,rank3_mean_abs_shap,0.1321193512653152,,100,shap_per_segment.csv,
+shap_top5,segment 0,cc_payments,rank4_mean_abs_shap,0.0904311819687389,,100,shap_per_segment.csv,
+shap_top5,segment 0,cc_purchases_installments_frequency,rank5_mean_abs_shap,0.0375595898244857,,100,shap_per_segment.csv,
+shap_top5,segment 1,cc_purchases,rank1_mean_abs_shap,0.2997261827917434,,100,shap_per_segment.csv,
+shap_top5,segment 1,cc_oneoff_purchases,rank2_mean_abs_shap,0.1896435460844905,,100,shap_per_segment.csv,
+shap_top5,segment 1,cc_installments_purchases,rank3_mean_abs_shap,0.1129230685351589,,100,shap_per_segment.csv,
+shap_top5,segment 1,cc_cash_advance,rank4_mean_abs_shap,0.0869777427652366,,100,shap_per_segment.csv,
+shap_top5,segment 1,cc_tenure,rank5_mean_abs_shap,0.0679224290788714,,100,shap_per_segment.csv,
+shap_top5,segment 2,cc_oneoff_purchases,rank1_mean_abs_shap,0.3006433398256794,,100,shap_per_segment.csv,
+shap_top5,segment 2,cc_installments_purchases,rank2_mean_abs_shap,0.1199491075596305,,100,shap_per_segment.csv,
+shap_top5,segment 2,cc_tenure,rank3_mean_abs_shap,0.0648123592503924,,100,shap_per_segment.csv,
+shap_top5,segment 2,cc_purchases_trx,rank4_mean_abs_shap,0.0150723582355532,,100,shap_per_segment.csv,
+shap_top5,segment 2,cc_payments,rank5_mean_abs_shap,0.0129229845838649,,100,shap_per_segment.csv,
+shap_top5,segment 3,cc_oneoff_purchases,rank1_mean_abs_shap,0.46301081657715,,100,shap_per_segment.csv,
+shap_top5,segment 3,cc_installments_purchases,rank2_mean_abs_shap,0.1088313800336219,,100,shap_per_segment.csv,
+shap_top5,segment 3,cc_payments,rank3_mean_abs_shap,0.0518988276825519,,100,shap_per_segment.csv,
+shap_top5,segment 3,cc_tenure,rank4_mean_abs_shap,0.0477331539439732,,100,shap_per_segment.csv,
+shap_top5,segment 3,cc_purchases,rank5_mean_abs_shap,0.0439334100377471,,100,shap_per_segment.csv,
+explainer,segment 0,test nodes,top5_same,0.85,0.29647046537910865,20,gnnexplainer_nodes.csv,p_wilcoxon_top5_vs_random5=0.02771; p_wilcoxon_top5_vs_all=0.02771
+explainer,segment 0,test nodes,random5_same,0.9229499999999999,0.18850980010822277,20,gnnexplainer_nodes.csv,p_wilcoxon_top5_vs_random5=0.02771; p_wilcoxon_top5_vs_all=0.02771
+explainer,segment 0,test nodes,all_same,0.9234350649350649,0.18873689630928436,20,gnnexplainer_nodes.csv,p_wilcoxon_top5_vs_random5=0.02771; p_wilcoxon_top5_vs_all=0.02771
+explainer,segment 1,test nodes,top5_same,0.96,0.13917047478769187,20,gnnexplainer_nodes.csv,p_wilcoxon_top5_vs_random5=0.6858; p_wilcoxon_top5_vs_all=0.6858
+explainer,segment 1,test nodes,random5_same,0.9663999999999999,0.10521426759362608,20,gnnexplainer_nodes.csv,p_wilcoxon_top5_vs_random5=0.6858; p_wilcoxon_top5_vs_all=0.6858
+explainer,segment 1,test nodes,all_same,0.9671870520783564,0.10337147958214225,20,gnnexplainer_nodes.csv,p_wilcoxon_top5_vs_random5=0.6858; p_wilcoxon_top5_vs_all=0.6858
+explainer,segment 2,test nodes,top5_same,0.9400000000000001,0.13138933706635725,20,gnnexplainer_nodes.csv,p_wilcoxon_top5_vs_random5=0.3452; p_wilcoxon_top5_vs_all=0.2568
+explainer,segment 2,test nodes,random5_same,0.92865,0.1535486465004015,20,gnnexplainer_nodes.csv,p_wilcoxon_top5_vs_random5=0.3452; p_wilcoxon_top5_vs_all=0.2568
+explainer,segment 2,test nodes,all_same,0.9264814814814816,0.15544075871789978,20,gnnexplainer_nodes.csv,p_wilcoxon_top5_vs_random5=0.3452; p_wilcoxon_top5_vs_all=0.2568
+explainer,segment 3,test nodes,top5_same,0.9800000000000001,0.08944271909999159,20,gnnexplainer_nodes.csv,p_wilcoxon_top5_vs_random5=0.715; p_wilcoxon_top5_vs_all=0.715
+explainer,segment 3,test nodes,random5_same,0.9784500000000002,0.05496072760569467,20,gnnexplainer_nodes.csv,p_wilcoxon_top5_vs_random5=0.715; p_wilcoxon_top5_vs_all=0.715
+explainer,segment 3,test nodes,all_same,0.9786796137809961,0.05733549571631459,20,gnnexplainer_nodes.csv,p_wilcoxon_top5_vs_random5=0.715; p_wilcoxon_top5_vs_all=0.715
+explainer,segment all,test nodes,top5_same,0.9324999999999999,0.18540069504054993,80,gnnexplainer_nodes.csv,p_wilcoxon_top5_vs_random5=0.1169; p_wilcoxon_top5_vs_all=0.1118
+explainer,segment all,test nodes,random5_same,0.9491125,0.134828911160812,80,gnnexplainer_nodes.csv,p_wilcoxon_top5_vs_random5=0.1169; p_wilcoxon_top5_vs_all=0.1118
+explainer,segment all,test nodes,all_same,0.9489458030689747,0.13542332144080346,80,gnnexplainer_nodes.csv,p_wilcoxon_top5_vs_random5=0.1169; p_wilcoxon_top5_vs_all=0.1118
+explainer,all,test nodes,statistic_varies_across_nodes,1.0,0.18540069504054993,80,gnnexplainer_nodes.csv,
+segment_profile,segment 0,"seed0 GNN, test",cc_balance,1285.0891215684453,,431,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 0,"seed0 GNN, test",cc_purchases,658.6140371229699,,431,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 0,"seed0 GNN, test",cc_cash_advance,960.0458174292344,,431,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 0,"seed0 GNN, test",cc_credit_limit,4015.243619489559,,431,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 0,"seed0 GNN, test",cc_payments,1177.4761785591647,,431,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 0,"seed0 GNN, test",cc_purchases_frequency,0.355864354988399,,431,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 0,"seed0 GNN, test",cc_cash_advance_frequency,0.1421034083526682,,431,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 0,"seed0 GNN, test",cc_purchases_trx,6.856148491879351,,431,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 0,"seed0 GNN, test",cc_prc_full_payment,0.1360433016241299,,431,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 0,"seed0 GNN, test",cc_tenure,10.59860788863109,,431,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 1,"seed0 GNN, test",cc_balance,2225.911461827716,,267,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 1,"seed0 GNN, test",cc_purchases,0.6140823970037453,,267,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 1,"seed0 GNN, test",cc_cash_advance,1844.6465028801497,,267,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 1,"seed0 GNN, test",cc_credit_limit,3907.6779026217223,,267,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 1,"seed0 GNN, test",cc_payments,1575.2352012022473,,267,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 1,"seed0 GNN, test",cc_purchases_frequency,0.0034331985018726,,267,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 1,"seed0 GNN, test",cc_cash_advance_frequency,0.2553966029962547,,267,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 1,"seed0 GNN, test",cc_purchases_trx,0.0262172284644194,,267,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 1,"seed0 GNN, test",cc_prc_full_payment,0.0345985056179775,,267,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 1,"seed0 GNN, test",cc_tenure,11.91385767790262,,267,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 2,"seed0 GNN, test",cc_balance,2000.5317261680912,,351,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 2,"seed0 GNN, test",cc_purchases,2321.2328205128206,,351,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 2,"seed0 GNN, test",cc_cash_advance,823.530500974359,,351,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 2,"seed0 GNN, test",cc_credit_limit,5782.8541828547,,351,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 2,"seed0 GNN, test",cc_payments,2710.6832647635324,,351,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 2,"seed0 GNN, test",cc_purchases_frequency,0.8224668575498575,,351,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 2,"seed0 GNN, test",cc_cash_advance_frequency,0.1121945698005698,,351,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 2,"seed0 GNN, test",cc_purchases_trx,35.34188034188034,,351,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 2,"seed0 GNN, test",cc_prc_full_payment,0.1699521396011396,,351,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 2,"seed0 GNN, test",cc_tenure,11.94017094017094,,351,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 3,"seed0 GNN, test",cc_balance,828.5024426632654,,294,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 3,"seed0 GNN, test",cc_purchases,600.5094897959184,,294,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 3,"seed0 GNN, test",cc_cash_advance,391.6839805986394,,294,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 3,"seed0 GNN, test",cc_credit_limit,3308.673469387755,,294,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 3,"seed0 GNN, test",cc_payments,1145.364393452381,,294,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 3,"seed0 GNN, test",cc_purchases_frequency,0.691249231292517,,294,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 3,"seed0 GNN, test",cc_cash_advance_frequency,0.0456761258503401,,294,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 3,"seed0 GNN, test",cc_purchases_trx,13.758503401360544,,294,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 3,"seed0 GNN, test",cc_prc_full_payment,0.2447759863945578,,294,segment_profiles_gnn_seed0.csv,
+segment_profile,segment 3,"seed0 GNN, test",cc_tenure,11.904761904761903,,294,segment_profiles_gnn_seed0.csv,
+independent_check,all,all variants,max_abs_diff,0.00023969895747200098,,1200,independent_check_summary.json,
+independent_check,all,all variants,max_rel_diff,1.4266940805850276e-06,,1200,independent_check_summary.json,

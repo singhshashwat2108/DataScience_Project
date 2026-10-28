@@ -1,0 +1,20 @@
+{
+  "fidelity_macro_f1_test": 0.9860434520146151,
+  "accuracy_test": 0.9858525688756515,
+  "n_test": 1343,
+  "n_shap": 400,
+  "shap_method": "shap permutation explainer, 20 background train customers, 4 permutations, stratified test subsample (<=100 per segment)",
+  "surrogate": "sklearn HistGradientBoostingClassifier(max_iter=200)",
+  "test_segment_sizes": [
+    431,
+    267,
+    351,
+    294
+  ],
+  "train_segment_sizes": [
+    1943,
+    1210,
+    1690,
+    1422
+  ]
+}
