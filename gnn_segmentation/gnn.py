@@ -54,6 +54,24 @@ def split_edges(edge_index, n, val_frac=0.05, seed=0):
     return to_undirected(tr, num_nodes=n), val_pos, val_neg
 
 
+def sample_negatives(pos_edge_index, num_nodes, num_neg):
+    """Uniform random node pairs that are not self-loops and not in pos_edge_index.
+
+    Replaces PyG's negative_sampling in the training loop: that one draws with Python's
+    `random.sample` (slow, ~0.7 s per call on the k=20 graph and not seeded by torch). This
+    version uses the torch RNG, so seed_everything makes it reproducible.
+    """
+    pos_id = (pos_edge_index[0] * num_nodes + pos_edge_index[1]).sort().values
+    out = torch.empty(0, dtype=torch.long)
+    while out.numel() < num_neg:
+        cand = torch.randint(0, num_nodes * num_nodes, (int(1.2 * num_neg) + 16,))
+        hit = pos_id[torch.searchsorted(pos_id, cand).clamp_(max=pos_id.numel() - 1)] == cand
+        ok = (cand // num_nodes != cand % num_nodes) & ~hit
+        out = torch.cat([out, cand[ok]])
+    out = out[:num_neg]
+    return torch.stack([out // num_nodes, out % num_nodes])
+
+
 def link_auc(z, pos, neg):
     s = torch.cat([(z[pos[0]] * z[pos[1]]).sum(1), (z[neg[0]] * z[neg[1]]).sum(1)])
     y = np.r_[np.ones(pos.size(1)), np.zeros(neg.size(1))]
@@ -62,7 +80,8 @@ def link_auc(z, pos, neg):
 
 def train_gnn(X, edge_index, train_idx, kind="gcn", objective="vgae", dim=32,
               hidden=64, lr=0.01, weight_decay=5e-4, dropout=0.0, epochs=200,
-              patience=20, seed=0, ablate=False, verbose=False, eval_every=5):
+              patience=20, seed=0, ablate=False, verbose=False, eval_every=5,
+              legacy_val_graph=False):
     """Train an encoder without labels and return embeddings for all nodes.
 
     GCN is trained transductively on the full similarity graph; GraphSAGE is
@@ -73,6 +92,7 @@ def train_gnn(X, edge_index, train_idx, kind="gcn", objective="vgae", dim=32,
     n = X.shape[0]
     x = torch.tensor(X, dtype=torch.float32)
     tr_ei, val_pos, val_neg = split_edges(edge_index, n, seed=seed)
+    tr_all = tr_ei                  # every edge except the held-out validation positives
 
     if kind == "sage":  # inductive: train only on edges among training customers
         mask = torch.zeros(n, dtype=torch.bool)
@@ -81,7 +101,11 @@ def train_gnn(X, edge_index, train_idx, kind="gcn", objective="vgae", dim=32,
 
     empty = torch.empty(2, 0, dtype=torch.long)
     enc_ei_train = empty if ablate else tr_ei          # B4: A = I
-    enc_ei_full = empty if ablate else edge_index
+    enc_ei_full = empty if ablate else edge_index       # final embeddings of all customers
+    # Early stopping is scored on a graph WITHOUT the held-out positives; with the full graph
+    # the held-out edges were message-passing edges and inflated the AUC (GCN). legacy_val_graph
+    # restores the old behaviour for comparison.
+    enc_ei_val = empty if ablate else (edge_index if legacy_val_graph else tr_all)
 
     enc = Encoder(X.shape[1], hidden, dim, kind, variational=(objective == "vgae"),
                   dropout=dropout)
@@ -100,7 +124,7 @@ def train_gnn(X, edge_index, train_idx, kind="gcn", objective="vgae", dim=32,
         opt.zero_grad()
         if objective == "vgae":
             z = model.encode(x, enc_ei_train)
-            loss = model.recon_loss(z, tr_ei) + model.kl_loss() / n
+            loss = model.recon_loss(z, tr_ei, sample_negatives(tr_ei, n, tr_ei.size(1))) + model.kl_loss() / n
         else:
             pos, neg, s = model(x, enc_ei_train)
             loss = model.loss(pos, neg, s)
@@ -111,7 +135,7 @@ def train_gnn(X, edge_index, train_idx, kind="gcn", objective="vgae", dim=32,
 
         model.eval()
         with torch.no_grad():
-            z = embed(model, objective, x, enc_ei_full)
+            z = embed(model, objective, x, enc_ei_val)
         auc = link_auc(z, val_pos, val_neg)
         hist.append((ep, loss.item(), auc))
         if auc > best + 1e-4:
