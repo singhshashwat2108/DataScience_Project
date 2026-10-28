@@ -13,6 +13,8 @@ from sklearn.metrics import roc_auc_score
 from torch_geometric.nn import GCNConv, SAGEConv, VGAE, DeepGraphInfomax
 from torch_geometric.utils import negative_sampling, to_undirected, subgraph
 
+from .seed import seed_everything
+
 torch.set_num_threads(max(1, torch.get_num_threads()))
 
 
@@ -67,8 +69,7 @@ def train_gnn(X, edge_index, train_idx, kind="gcn", objective="vgae", dim=32,
     trained inductively on the training-node subgraph and then applied to the
     full graph so that validation / test customers attach to training ones.
     """
-    torch.manual_seed(seed)
-    np.random.seed(seed)
+    seed_everything(seed)
     n = X.shape[0]
     x = torch.tensor(X, dtype=torch.float32)
     tr_ei, val_pos, val_neg = split_edges(edge_index, n, seed=seed)
@@ -148,7 +149,7 @@ class AutoEncoder(nn.Module):
 
 def train_autoencoder(X, train_idx, val_idx, dim=32, hidden=64, lr=0.005,
                       epochs=200, patience=20, batch=512, seed=0):
-    torch.manual_seed(seed)
+    seed_everything(seed)
     x = torch.tensor(X, dtype=torch.float32)
     ae = AutoEncoder(X.shape[1], hidden, dim)
     opt = torch.optim.Adam(ae.parameters(), lr=lr, weight_decay=5e-4)
