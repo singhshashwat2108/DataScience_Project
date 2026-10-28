@@ -92,3 +92,46 @@ def b0_scores(space, labels, idx):
     out["noise_share"] = 1 - len(keep) / len(idx)
     out["n_segments_used"] = len(np.unique(labels[keep]))
     return out
+
+
+# ---------------- one tiny-cluster rule for ALL methods ----------------
+TINY_SHARE = 0.005   # clusters smaller than 0.5% of the evaluated nodes are "tiny"
+
+
+def merge_tiny(X, labels, n_total, min_share=TINY_SHARE):
+    """Merge customers of tiny clusters into the nearest large cluster.
+
+    X, labels: evaluated customers (noise label -1 already removed); n_total: number of
+    evaluated nodes used for the 0.5% threshold. "Nearest" = Euclidean distance to the
+    centroid of each large cluster in X (the common space). Returns (new_labels, tiny_sizes).
+    """
+    ids, cnt = np.unique(labels, return_counts=True)
+    tiny = ids[cnt < min_share * n_total]
+    big = ids[cnt >= min_share * n_total]
+    sizes = {int(c): int(k) for c, k in zip(ids, cnt) if c in tiny}
+    if len(tiny) == 0 or len(big) == 0:
+        return labels.copy(), sizes
+    cent = np.stack([X[labels == c].mean(0) for c in big])
+    out = labels.copy()
+    m = np.isin(labels, tiny)
+    out[m] = big[np.argmin(((X[m][:, None, :] - cent[None]) ** 2).sum(-1), axis=1)]
+    return out, sizes
+
+
+def evaluate_tiny(X, labels, n_total=None, min_share=TINY_SHARE):
+    """Indices in the common space X (same for every method), both ways:
+    *_all    = every cluster as produced by the method;
+    *_merged = after merging tiny clusters (< min_share of n_total) into the nearest large one.
+    Noise (label -1, DBSCAN) is excluded from both and reported as noise_share."""
+    n_total = len(labels) if n_total is None else n_total
+    keep = labels >= 0
+    Xk, lk = X[keep], labels[keep]
+    lm, tiny = merge_tiny(Xk, lk, n_total, min_share)
+    a, m = common_space_scores(Xk, lk), common_space_scores(Xk, lm)
+    out = {f"{k}_all": v for k, v in a.items()}
+    out.update({f"{k}_merged": v for k, v in m.items()})
+    out.update(n_clusters_all=len(np.unique(lk)), n_clusters_merged=len(np.unique(lm)),
+               n_tiny_clusters=len(tiny), tiny_sizes=";".join(f"{c}:{s}" for c, s in tiny.items()),
+               min_cluster_size=int(np.bincount(lk).min()) if len(lk) else 0,
+               noise_share=1 - keep.mean())
+    return out
