@@ -6,16 +6,11 @@ Shashwat Singh, Vansh Dhir, Jashesh Rajesh Patel (Vellore Institute of Technolog
 
 This repository holds the code, saved results and papers behind the final project paper. The paper tests whether a behavioral kNN similarity graph and a GraphSAGE + VGAE encoder improve segmentation of credit-card customers compared with graph-free baselines. The result is negative: the GNN segments are less well separated than K-Means, and indistinguishable from a shuffled-edge control.
 
-## Which branch and tag to use
+## Repository and version
 
-| Ref | Meaning |
-|---|---|
-| `final_sub` | Clean submission branch (this one): code, results, data needed to run, papers |
-| `paper-results` (tag) | Experiment commit `097c5e9`, the code that produced the paper's main-study numbers |
-| `fix/lean` | Full development history of the lean experiment, including scratch files removed from `final_sub` |
-| `main` | Earlier pipeline, before the controlled evaluation |
+Repository: https://github.com/singhshashwat2108/DataScience_Project
 
-The paper (Section 8.1) refers to the code as being on `fix/lean` at commit `097c5e9`. `final_sub` contains the same code (same commit in its history) without the scratch files and the old entry points.
+The code that produced the paper's main-study numbers is experiment commit `097c5e9`. This repository contains that code together with the saved results, the data files needed to run it, and the papers. Scratch files and the earlier pipeline entry points were removed for the submission.
 
 ## Headline results (credit-card test split, K = 4, 10 seeds)
 
