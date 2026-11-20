@@ -1,0 +1,152 @@
+{
+  "seed": 42,
+  "ratios": [
+    0.7,
+    0.15,
+    0.15
+  ],
+  "sources": {
+    "cc": {
+      "file": "D:\\DataScience\\CC GENERAL.csv",
+      "rows": 8950,
+      "numeric": [
+        "cc_balance",
+        "cc_balance_frequency",
+        "cc_purchases",
+        "cc_oneoff_purchases",
+        "cc_installments_purchases",
+        "cc_cash_advance",
+        "cc_purchases_frequency",
+        "cc_oneoff_purchases_frequency",
+        "cc_purchases_installments_frequency",
+        "cc_cash_advance_frequency",
+        "cc_cash_advance_trx",
+        "cc_purchases_trx",
+        "cc_credit_limit",
+        "cc_payments",
+        "cc_minimum_payments",
+        "cc_prc_full_payment",
+        "cc_tenure"
+      ],
+      "binary": [
+        "cc_minimum_payments_missing",
+        "cc_credit_limit_missing"
+      ],
+      "categorical": [],
+      "process_excluded": [],
+      "reference_labels": []
+    },
+    "bm": {
+      "file": "D:\\DataScience\\bank-full.csv",
+      "rows": 45211,
+      "numeric": [
+        "bm_age",
+        "bm_balance"
+      ],
+      "binary": [
+        "bm_default",
+        "bm_housing",
+        "bm_loan"
+      ],
+      "categorical": [
+        "bm_job",
+        "bm_marital",
+        "bm_education"
+      ],
+      "process_excluded": [
+        "bm_contact",
+        "bm_month",
+        "bm_day",
+        "bm_duration",
+        "bm_campaign",
+        "bm_previous",
+        "bm_prev_contacted",
+        "bm_pdays",
+        "bm_poutcome"
+      ],
+      "reference_labels": [
+        "ref_label"
+      ]
+    },
+    "sa": {
+      "file": "D:\\DataScience\\train_ver2.csv",
+      "rows": 50000,
+      "numeric": [
+        "sa_age",
+        "sa_antiguedad",
+        "sa_renta"
+      ],
+      "binary": [
+        "sa_ind_actividad_cliente",
+        "sa_ind_nuevo",
+        "sa_ind_ahor_fin_ult1",
+        "sa_ind_aval_fin_ult1",
+        "sa_ind_cco_fin_ult1",
+        "sa_ind_cder_fin_ult1",
+        "sa_ind_cno_fin_ult1",
+        "sa_ind_ctju_fin_ult1",
+        "sa_ind_ctma_fin_ult1",
+        "sa_ind_ctop_fin_ult1",
+        "sa_ind_ctpp_fin_ult1",
+        "sa_ind_deco_fin_ult1",
+        "sa_ind_deme_fin_ult1",
+        "sa_ind_dela_fin_ult1",
+        "sa_ind_ecue_fin_ult1",
+        "sa_ind_fond_fin_ult1",
+        "sa_ind_hip_fin_ult1",
+        "sa_ind_plan_fin_ult1",
+        "sa_ind_pres_fin_ult1",
+        "sa_ind_reca_fin_ult1",
+        "sa_ind_tjcr_fin_ult1",
+        "sa_ind_valo_fin_ult1",
+        "sa_ind_viv_fin_ult1",
+        "sa_ind_nomina_ult1",
+        "sa_ind_nom_pens_ult1",
+        "sa_ind_recibo_ult1",
+        "sa_age_missing",
+        "sa_renta_missing"
+      ],
+      "categorical": [
+        "sa_sexo",
+        "sa_tiprel_1mes",
+        "sa_indext",
+        "sa_canal_entrada",
+        "sa_cod_prov"
+      ],
+      "process_excluded": [],
+      "reference_labels": [
+        "ref_label"
+      ]
+    }
+  },
+  "keys": [
+    "uid",
+    "source",
+    "orig_id",
+    "split",
+    "ref_label_type",
+    "ref_label"
+  ],
+  "core_features": {
+    "numeric": [
+      "age",
+      "tenure_months",
+      "balance",
+      "n_products"
+    ],
+    "numeric_scaled_within_source": [
+      "age_q",
+      "tenure_months_q",
+      "balance_q",
+      "n_products_q"
+    ],
+    "binary": [
+      "is_active",
+      "has_credit_card",
+      "has_loan",
+      "has_mortgage",
+      "has_savings_deposit"
+    ]
+  },
+  "notes": "core columns are NaN where a source cannot observe the concept (structural missing). *_q = within-source quantile rank (fit on train). Build graphs WITHIN a source; do not treat cross-source neighbours as meaningful (different banks, no shared customers)."
+}

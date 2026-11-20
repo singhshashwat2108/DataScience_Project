@@ -1,0 +1,31 @@
+[cc] CC GENERAL.csv: 8950 rows x 18 cols
+[cc] clipped impossible frequency values (>1) in 8 rows
+[cc] minimum_payments: 240 nulls were 'no payment made' -> 0; 73 remaining nulls -> train median
+[cc] split sizes: {'train': 6265, 'test': 1343, 'val': 1342}
+[cc] imputed 74 numeric nulls with TRAIN stats; categorical nulls -> 'unknown'
+[bm] bank-full.csv: 45211 rows x 17 cols
+[bm] split sizes: {'train': 31647, 'test': 6782, 'val': 6782}
+[bm] imputed 0 numeric nulls with TRAIN stats; categorical nulls -> 'unknown'
+[sa] reading D:\DataScience\train_ver2.csv in chunks (snapshot 2016-05-28) ...
+[sa] scanned 13,647,309 rows; months present: 2015-01-28 .. 2016-05-28 (17 months)
+[sa] snapshot 2016-05-28: 931,453 unique customers
+[sa] random sample of 50,000 customers (seed 42)
+[sa] invalid ages set to NaN: 460; invalid seniority (<0) set to NaN: 0; renta missing: 24.7%
+[sa] columns dropped by design: fecha_dato (constant within a snapshot), fecha_alta (superseded by antiguedad), nomprov (duplicate of cod_prov), ult_fec_cli_1t (only populated for ex-primary customers)
+[sa] split sizes: {'train': 35000, 'test': 7500, 'val': 7500}
+[sa] auto-dropped degenerate columns (null>=95% or top-category>=99.5%): [('sa_ind_empleado', 0.0, 1.0), ('sa_pais_residencia', 0.0, 0.996), ('sa_indrel_1mes', 0.004, 0.999), ('sa_indresi', 0.0, 0.996), ('sa_conyuemp', 1.0, 1.0), ('sa_indfall', 0.0, 0.997), ('sa_tipodom', 0.0, 1.0)]
+[sa] imputed 12787 numeric nulls with TRAIN stats; categorical nulls -> 'unknown'
+
+[unified] rows per source x split
+split   test  train   val
+source                   
+bm      6782  31647  6782
+cc      1343   6265  1342
+sa      7500  35000  7500
+
+[unified] share of non-null values per core column, by source
+        age  tenure_months  balance  n_products  is_active  has_credit_card  has_loan  has_mortgage  has_savings_deposit
+source                                                                                                                  
+bm      1.0            0.0      1.0         1.0        0.0              0.0       1.0           1.0                  0.0
+cc      0.0            1.0      1.0         1.0        1.0              1.0       0.0           0.0                  0.0
+sa      1.0            1.0      0.0         1.0        1.0              1.0       1.0           1.0                  1.0
